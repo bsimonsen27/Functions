@@ -24,7 +24,13 @@ def calculate(userNumber, converstionType):
         userAnswer = userNumber / 25.4
     return userAnswer
 
-# perform the conversion 
-#conditional statement 
 calcVal = calculate(userNumber, userConversion)
-print('The answer is ', calcVal)
+
+def printResults(type, input, calc):
+    if type == '1':
+        print('The answer is', input, 'in =', calc, 'mm')
+    if type == '2':
+        print('The answer is', input, 'mm =', calc, 'in')
+
+printResults(userConversion, userInput, calcVal)
+
