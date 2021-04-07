@@ -8,18 +8,23 @@ userInput = input('What is the number? ')
 print('Your number is :', userInput) # TODO remove 
 userNumber = float(userInput)
 
+#function that calculates
+def in2mm(userNumber):
+    userAnswer = userNumber * 25.4
+    return userAnswer
+
+def mm2in(userNumber):
+    userAnswer = userNumber / 25.4
+    return userAnswer
+
+def calculate(userNumber, converstionType):
+    if converstionType == '1':
+        userAnswer = userNumber * 25.4
+    if converstionType == '2':
+        userAnswer = userNumber / 25.4
+    return userAnswer
+
 # perform the conversion 
 #conditional statement 
-if userConversion == '1':
-    # convert from in to mm (userNumber * 25.4)
-    print('in to mm')
-    userAnswer = userNumber * 25.4
-    print('The answer is', userAnswer, 'mm')
-if userConversion == '2':
-    # convert from mm to in (userNumber / 25.4)
-    print('mm to in')
-    userAnswer = userNumber / 25.4
-    print('The answer is', userAnswer, 'inches.')
-
-# print that information
-print('The answer is', userAnswer)
+calcVal = calculate(userNumber, userConversion)
+print('The answer is ', calcVal)
