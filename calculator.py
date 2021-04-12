@@ -11,6 +11,9 @@ def mm2in(userNumber):
 def in2ft(userNumber):
     return userNumber / 12
 
+def ft2in(userNumber):
+    return userNumber * 12
+
 
 def printResults(type, input):
     #calcVal = calculate(userNumber, userConversion)
@@ -26,10 +29,19 @@ def printResults(type, input):
         cfrom = 'in'
         to = 'ft'
         calcVal = in2ft(input)
+    if type == '4':
+        cfrom = 'ft'
+        to = 'in'
+        calcVal = ft2in(input)
     print('The answer is', input, cfrom,'=', calcVal, to)
 
 while True:
-    userConversion = input('What type of conversion?\n\t1-inches to mm.\n\t2- mm to inches.\n\t3-inches to feet.\n\tq to quit.\n')
+    userConversion = input('What type of conversion?'
+    '\n\t1-inches to mm.'
+    '\n\t2- mm to inches.'
+    '\n\t3-inches to feet.'
+    '\n\t4-feet to inches.'
+    '\n\tq to Quit.\n')
     if userConversion == 'q':
         break
     userInput = input('What is the number? ')
